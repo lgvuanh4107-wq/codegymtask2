@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoToken - Trang Chủ Hệ Sinh Thái</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero { 
+            background: linear-gradient(135deg, var(--primary), #1B5E20); 
+            color: white; padding: 40px 20px; border-radius: 12px; text-align: center; margin-bottom: 30px;
+        }
+        .hero h1 { color: white; font-size: 2.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; }
+
+        .module-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 40px; 
+        }
+        .module-card { 
+            background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            text-align: center; text-decoration: none; color: var(--text); border: 2px solid transparent; transition: all 0.2s;
+        }
+        .module-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .module-icon { font-size: 3rem; margin-bottom: 10px; display: block; }
+        .module-title { font-size: 1.2rem; font-weight: bold; margin-bottom: 5px; color: var(--primary); }
+        .module-desc { font-size: 0.9rem; color: #666; }
+
+        .extra-section { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .extra-section h2 { color: var(--primary); border-bottom: 2px solid #E8F5E9; padding-bottom: 10px; margin-top: 0; }
+        
+        .voucher-grid { display: flex; gap: 20px; flex-wrap: wrap; }
+        .voucher-card { flex: 1; min-width: 200px; border: 1px dashed #FF9800; padding: 15px; border-radius: 8px; text-align: center; background: #FFF8E1; }
+        .voucher-price { font-size: 1.5rem; color: #F57C00; font-weight: bold; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container" style="max-width: 1200px; background: transparent; box-shadow: none;">
+        
+        <!-- Hero Banner -->
+        <div class="hero">
+            <h1>🌱 Hệ Sinh Thái EcoToken</h1>
+            <p>Trạm giao dịch, trao đổi đồ cũ thông minh kết hợp Tủ khóa IoT dành cho Sinh viên.</p>
+        </div>
+
+        <!-- Menu điều hướng tới 6 phân hệ đã làm -->
+        <h2 style="color: #333; margin-bottom: 20px;">📁 Danh mục các phân hệ (Demo Modules)</h2>
+        <div class="module-grid">
+            <a href="auth.html" class="module-card">
+                <span class="module-icon">🔐</span>
+                <div class="module-title">1. Đăng ký & Admin</div>
+                <div class="module-desc">Xác thực Email trường, Upload thẻ SV, Phê duyệt Admin (BR-10).</div>
+            </a>
+            <a href="market.html" class="module-card">
+                <span class="module-icon">🛒</span>
+                <div class="module-title">2. Sàn Giao Dịch</div>
+                <div class="module-desc">Đăng đồ, Định giá AI tự động, Escrow thanh toán (FR-1.2, FR-2.2).</div>
+            </a>
+            <a href="locker.html" class="module-card">
+                <span class="module-icon">🤖</span>
+                <div class="module-title">3. Tủ Khóa IoT</div>
+                <div class="module-desc">Giả lập State Machine, Cảm biến, Nhập mã PIN mở tủ (FR-3.1).</div>
+            </a>
+            <a href="wallet.html" class="module-card">
+                <span class="module-icon">💳</span>
+                <div class="module-title">4. Ví & Khiếu nại</div>
+                <div class="module-desc">Lịch sử giao dịch, Nạp Token, Xử lý khiếu nại (Refund) (US-16).</div>
+            </a>
+            <a href="dashboard.html" class="module-card">
+                <span class="module-icon">🌟</span>
+                <div class="module-title">5. Thành viên & Đánh giá</div>
+                <div class="module-title">Premium, Phí quá hạn, Liveness Tín nhiệm (US-08, US-11).</div>
+            </a>
+            <a href="locations.html" class="module-card">
+                <span class="module-icon">🗺️</span>
+                <div class="module-title">6. Bản đồ & Camera Log</div>
+                <div class="module-desc">Đặt hộc 30 phút, Trích xuất Log An Ninh, Liveness Check (FR-1.4, FR-4.1).</div>
+            </a>
+        </div>
+
+        <!-- Các tính năng nâng cao (Should/Could) -->
+        <div class="extra-section">
+            <h2>🎁 Đổi Voucher & Tiện Ích Tủ Khóa (Phần 7 - Tính năng Mở rộng)</h2>
+            <p style="color: gray;">Các chức năng FR-1.10 (Giặt sấy) và FR-1.11 (Voucher đối tác) nằm trong nhóm "Could have".</p>
+            
+            <div style="display: flex; gap: 30px; flex-wrap: wrap; margin-top: 20px;">
+                
+                <!-- FR-1.11: Đổi Voucher -->
+                <div style="flex: 2; min-width: 400px;">
+                    <h3 style="margin-top: 0;">🎟️ Đổi Token lấy Voucher (FR-1.11)</h3>
+                    <div class="voucher-grid">
+                        <div class="voucher-card">
+                            <strong style="font-size: 1.1rem;">☕ Highlands Coffee 50k</strong>
+                            <div class="voucher-price">40 🍃</div>
+                            <button class="btn-sm" style="width: 100%; background: #F57C00;" onclick="redeemVoucher('Highlands Coffee 50k', 40)">Đổi ngay</button>
+                        </div>
+                        <div class="voucher-card">
+                            <strong style="font-size: 1.1rem;">🎬 Vé Xem Phim CGV 2D</strong>
+                            <div class="voucher-price">75 🍃</div>
+                            <button class="btn-sm" style="width: 100%; background: #F57C00;" onclick="redeemVoucher('Vé xem phim CGV', 75)">Đổi ngay</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FR-1.10: Dịch vụ giặt sấy / Khử khuẩn UV -->
+                <div style="flex: 1; min-width: 300px; background: #F3E5F5; padding: 20px; border-radius: 8px; border: 1px solid #CE93D8;">
+                    <h3 style="margin-top: 0; color: #8E24AA;">✨ Tiện ích tủ khóa (FR-1.10)</h3>
+                    <p style="font-size: 0.9rem;">Áp dụng cho món đồ bạn chuẩn bị gửi vào tủ.</p>
+                    
+                    <label style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px; cursor: pointer;">
+                        <input type="checkbox" id="uv-service" style="width: 20px; height: 20px;">
+                        <span>Khử khuẩn tia UV (5 🍃 / lần)</span>
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px; cursor: pointer;">
+                        <input type="checkbox" id="dry-service" style="width: 20px; height: 20px;">
+                        <span>Giặt / Sấy khô đồ (15 🍃 / lần)</span>
+                    </label>
+                    
+                    <button style="background: #8E24AA;" onclick="buyService()">Đăng ký dịch vụ</button>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <script src="core.js"></script>
+    <script>
+        function redeemVoucher(name, price) {
+            let wallet = ecoAPI.getWallet();
+            if (wallet.available < price) {
+                alert("Bạn không đủ số dư để đổi voucher này!");
+                return;
+            }
+
+            if (confirm(`Xác nhận dùng ${price} Token để đổi Voucher: ${name}?`)) {
+                wallet.available -= price;
+                ecoAPI.updateWallet(wallet);
+                alert(`Đổi Voucher thành công!\nMã e-Voucher của bạn là: ${Math.random().toString(36).substr(2, 8).toUpperCase()}\n(Token trong ví đã bị trừ).`);
+            }
+        }
+
+        function buyService() {
+            let uv = document.getElementById('uv-service').checked;
+            let dry = document.getElementById('dry-service').checked;
+            
+            if(!uv && !dry) {
+                alert("Bạn chưa chọn dịch vụ nào!");
+                return;
+            }
+            
+            let total = 0;
+            let services = [];
+            if(uv) { total += 5; services.push("Khử khuẩn UV"); }
+            if(dry) { total += 15; services.push("Giặt / Sấy khô"); }
+            
+            let wallet = ecoAPI.getWallet();
+            if (wallet.available < total) {
+                alert("Bạn không đủ số dư để đăng ký dịch vụ này!");
+                return;
+            }
+
+            if(confirm(`Đăng ký dịch vụ: ${services.join(" + ")}.\nTổng phí: ${total} 🍃\nLệnh này sẽ được gửi đến Tủ khóa IoT. Bạn đồng ý chứ?`)) {
+                wallet.available -= total;
+                ecoAPI.updateWallet(wallet);
+                alert("Đăng ký thành công! Tủ khóa sẽ tự động bật " + services.join(" và ") + " khi bạn cất đồ vào hộc.");
+                document.getElementById('uv-service').checked = false;
+                document.getElementById('dry-service').checked = false;
+            }
+        }
+    </script>
+</body>
+</html>
